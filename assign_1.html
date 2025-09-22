@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Styling, Real-Time Clock & Frameworks Comparison</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  h1 {
+    color: #004aad;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  /* Box model styling */
+  .box-model {
+    border: 3px solid #28a745;
+    padding: 15px;
+    margin: 15px auto;
+    width: 300px;
+    background-color: #e3f6df;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.3);
+    border-radius: 10px;
+    text-align: center;
+  }
+  /* Flexbox layout */
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+  }
+  .flex-item {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .flex-item:hover {
+    background-color: #0056b3;
+  }
+  /* Grid layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+  }
+  .grid-item {
+    background-color: #ffc107;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: #4a403a;
+  }
+  /* Real-Time Clock Styling */
+  #clock {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    background-color: #222;
+    color: #0f0;
+    width: 250px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    box-shadow: 0 0 10px #0f0;
+  }
+  /* Table for Frameworks Comparison */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    font-size: 1rem;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+  }
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #cce5ff;
+  }
+  /* Simulated backend data section styling */
+  .backend-simulation {
+    max-width: 600px;
+    margin: 50px auto 20px;
+    background: white;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    color: #222;
+  }
+  .backend-simulation h2 {
+    color: #0062cc;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .user-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .user-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+  }
+</style>
+</head>
+<body>
+
+<h1>Styling Techniques, Real-Time Clock & Frameworks Comparison</h1>
+
+<section class="box-model">
+  <h2>Box Model Styling Example</h2>
+  <p>This container uses padding, border, margin, background color, box shadow, and border-radius.</p>
+</section>
+
+<section class="flex-container">
+  <div class="flex-item">Flex Item 1</div>
+  <div class="flex-item">Flex Item 2</div>
+  <div class="flex-item">Flex Item 3</div>
+</section>
+
+<section class="grid-container">
+  <div class="grid-item">Grid 1</div>
+  <div class="grid-item">Grid 2</div>
+  <div class="grid-item">Grid 3</div>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Real-Time Digital Clock</h2>
+  <div id="clock">--:--:-- --</div>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Frameworks Comparison: React vs Angular</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>React</th>
+        <th>Angular</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Architecture</td>
+        <td>Library focused on UI with component-based architecture; relies on external libraries for routing, state management.</td>
+        <td>Full MVC framework with two-way data binding and dependency injection.</td>
+      </tr>
+      <tr>
+        <td>Language</td>
+        <td>JavaScript (JSX) mostly, optional TypeScript.</td>
+        <td>TypeScript primary language.</td>
+      </tr>
+      <tr>
+        <td>Learning Curve</td>
+        <td>Gentler for developers with JS experience.</td>
+        <td>Steeper due to many built-in concepts and TypeScript.</td>
+      </tr>
+      <tr>
+        <td>Performance</td>
+        <td>Efficient with Virtual DOM; great for dynamic UIs.</td>
+        <td>Optimized but heavier initial load; suited for enterprise apps.</td>
+      </tr>
+      <tr>
+        <td>Community & Ecosystem</td>
+        <td>Large open-source ecosystem.</td>
+        <td>Strong official support from Google; robust tools.</td>
+      </tr>
+      <tr>
+        <td>Use Cases</td>
+        <td>Single-page applications, flexible projects.</td>
+        <td>Enterprise apps, complex SPAs.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="backend-simulation">
+  <h2>Simulated Backend Data (Users)</h2>
+  <ul class="user-list" id="user-list">
+    <!-- Populated by JS to simulate data from DB -->
+  </ul>
+</section>
+
+<script>
+// Real-Time Clock
+function updateClock() {
+  const clock = document.getElementById('clock');
+  const now = new Date();
+
+  let hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  const padded = (num) => num.toString().padStart(2, '0');
+
+  clock.textContent = `${padded(hours)}:${padded(minutes)}:${padded(seconds)} ${ampm}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// Simulated backend data (users)
+const users = [
+  { firstName: 'Alice', lastName: 'Smith', email: 'alice@example.com' },
+  { firstName: 'Bob', lastName: 'Johnson', email: 'bob@example.com' },
+  { firstName: 'Carol', lastName: 'Williams', email: 'carol@example.com' },
+];
+
+const userListEl = document.getElementById('user-list');
+users.forEach(user => {
+  const li = document.createElement('li');
+  li.textContent = `${user.firstName} ${user.lastName} - ${user.email}`;
+  userListEl.appendChild(li);
+});
+</script>
+
+</body>
+</html>
